@@ -1,6 +1,6 @@
 #include <iostream>
-#include <conio.h> // For _kbhit() and _getch()
-#include <windows.h> // For Sleep()
+#include <conio.h> // _kbhit() and _getch()
+#include <windows.h> // Sleep()
 
 using namespace std;
 
@@ -34,7 +34,7 @@ void Draw() {
             if (j == 0)
                 cout << "#";
             if (i == y && j == x)
-                cout << "O";
+                cout << "\x1b[32mO";
             else if (i == fruitY && j == fruitX)
                 cout << "$";
             else {
@@ -134,7 +134,7 @@ int main() {
         Draw();
         Input();
         Logic();
-        Sleep(50);
+        Sleep(70);
     }
     return 0;
 }
